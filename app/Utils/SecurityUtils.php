@@ -8,7 +8,7 @@ class SecurityUtils {
      * @param string $mac HMAC
      */
     public static function isValidPublisherHashMac($mac) {
-        return $mac === SecurityUtils::getPublisherHashMac();
+        return hash_equals($mac, SecurityUtils::getPublisherHashMac());
     }
 
     /**
